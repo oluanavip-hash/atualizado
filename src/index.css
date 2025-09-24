@@ -1,0 +1,111 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* Dark theme with neon green accents */
+    --background: 0 0% 2%;
+    --foreground: 0 0% 95%;
+
+    --card: 0 0% 6%;
+    --card-foreground: 0 0% 95%;
+
+    --popover: 0 0% 4%;
+    --popover-foreground: 0 0% 95%;
+
+    --primary: 140 90% 45%;  /* Neon Green */
+    --primary-foreground: 0 0% 5%;
+
+    --secondary: 0 0% 18%;
+    --secondary-foreground: 0 0% 95%;
+
+    --muted: 0 0% 16%;
+    --muted-foreground: 0 0% 65%;
+
+    --accent: 140 90% 45%;
+    --accent-foreground: 0 0% 5%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 95%;
+
+    --border: 0 0% 20%;
+    --input: 0 0% 16%;
+    --ring: 140 90% 45%;
+
+    --radius: 0.75rem;
+
+    /* Custom design tokens */
+    --neon-green: 140 90% 45%;
+    --neon-green-glow: 140 90% 45%;
+    --dark-surface: 0 0% 12%;
+    --darker-surface: 0 0% 8%;
+    --glass-border: 0 0% 25%;
+    
+    /* Chart Colors - Diverse palette for better visualization */
+    --chart-color-1: 210 100% 60%;   /* Blue */
+    --chart-color-2: 140 90% 45%;    /* Green (Primary) */
+    --chart-color-3: 0 84% 60%;      /* Red (Destructive) */
+    --chart-color-4: 45 100% 55%;    /* Orange */
+    --chart-color-5: 280 100% 65%;   /* Purple */
+    --chart-color-6: 180 100% 40%;   /* Cyan */
+    --chart-color-7: 60 100% 50%;    /* Yellow */
+    --chart-color-8: 15 100% 60%;    /* Coral */
+    --chart-color-9: 300 100% 55%;   /* Magenta */
+    --chart-color-10: 90 100% 35%;   /* Lime */
+    
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(140 90% 45% / 0.2), hsl(140 90% 45% / 0.05));
+    --gradient-card: linear-gradient(145deg, hsl(0 0% 12%), hsl(0 0% 10%));
+    --gradient-glow: radial-gradient(circle at center, hsl(140 90% 45% / 0.15) 0%, transparent 70%);
+    
+    /* Shadows */
+    --shadow-neon: 0 0 20px hsl(140 90% 45% / 0.3);
+    --shadow-card: 0 4px 20px hsl(0 0% 0% / 0.5);
+    --shadow-elevated: 0 8px 32px hsl(0 0% 0% / 0.7);
+    
+    /* Animations */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
+    --sidebar-background: 0 0% 2%;
+
+    --sidebar-foreground: 0 0% 95%;
+
+    --sidebar-primary: 140 90% 45%;
+
+    --sidebar-primary-foreground: 0 0% 5%;
+
+    --sidebar-accent: 0 0% 12%;
+
+    --sidebar-accent-foreground: 0 0% 95%;
+
+    --sidebar-border: 0 0% 20%;
+
+    --sidebar-ring: 140 90% 45%;
+  }
+
+  /* Sidebar variables for dark theme */
+  --sidebar-background: 0 0% 8%;
+  --sidebar-foreground: 0 0% 95%;
+  --sidebar-primary: 140 90% 45%;
+  --sidebar-primary-foreground: 0 0% 5%;
+  --sidebar-accent: 0 0% 16%;
+  --sidebar-accent-foreground: 0 0% 95%;
+  --sidebar-border: 0 0% 20%;
+  --sidebar-ring: 140 90% 45%;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
